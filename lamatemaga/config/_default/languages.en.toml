@@ -1,0 +1,119 @@
+languageCode = "en"
+languageName = "English (US)"
+languageDirection = "ltr"
+weight = 2
+
+title = "La Matemaga"
+copyright = "&copy; 2026 La Matemaga"
+
+[params]
+  dateFormat = "2 January 2006"
+
+  mainSections = ["samples"]
+  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+
+[params.author]
+  name = "Cynthia Castillo"
+  image = "img/author.jpg"
+  headline = "Understanding is magic too"
+  bio = "Cynthia Castillo is a mathematician with experience across a range of data roles in both industry—including finance, healthcare, manufacturing, and real estate—and academia. She currently works as a Data Visualization Engineer at Zillow and shares science communication content under the pseudonym 'La Matemaga,' a project built on the idea that understanding is magic too. Through a variety of community programs, Cynthia connects cloud technologies, artificial intelligence, and data visualization with both technical and general audiences."
+  links = [
+    { linkedin = "https://linkedin.com/in/lamatemaga" },
+    { instagram = "https://instagram.com/lamatemaga" },
+    { youtube = "https://youtube.com/lamatemaga" },
+    { x-twitter = "https://twitter.com/lamatemaga" },
+    { email = "mailto:hola@lamatemaga.xyz" }
+  #   { github = "https://github.com/lamatemaga" },
+  #   { tiktok = "https://tiktok.com/@lamatemaga" },
+  #   { hashnode = "https://lamatemaga.hashnode.dev" },
+  #   { medium = "https://medium.com/@lamatemaga" },
+  #   { twitch = "https://twitch.tv/lamatemaga" },
+  #   { telegram = "https://t.me/lamatemaga" },
+  #   { gitlab = "https://gitlab.com/lamatemaga" },
+  #   { threads = "https://threads.net/@lamatemaga" },
+  #   { mastodon = "https://mastodon.instance/@username" },
+  #   { google-scholar = "https://scholar.google.com/citations?user=X2kebesAAAAJ" },
+  #   { orcid = "https://orcid.org/0000-0002-7481-9380" },
+  #   { researchgate = "https://www.researchgate.net/profile/Cynthia-Castillo-Silva" },
+  ###   { link = "https://link-to-some-website.com/" },
+  ###   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+  ###   { apple = "https://www.apple.com" },
+  ###   { blogger = "https://username.blogspot.com/" },
+  ###   { codepen = "https://codepen.io/username" },
+  ###   { dev = "https://dev.to/username" },
+  ###   { discord = "https://discord.gg/invitecode" },
+  ###   { dribbble = "https://dribbble.com/username" },
+  ###   { facebook = "https://facebook.com/username" },
+  ###   { flickr = "https://www.flickr.com/photos/username/" },
+  ###   { foursquare = "https://foursquare.com/username" },
+  ###   { google = "https://www.google.com/" },
+  ###   { keybase = "https://keybase.io/username" },
+  ###   { kickstarter = "https://www.kickstarter.com/profile/username" },
+  ###   { kofi = "https://ko-fi.com/username" },
+  ###   { lastfm = "https://lastfm.com/user/username" },
+  ###   { mendeley = "https://www.mendeley.com/" },
+  ###   { microsoft = "https://www.microsoft.com/" },
+  ###   { patreon = "https://www.patreon.com/username" },
+  ###   { pinterest = "https://pinterest.com/username" },
+  ###   { reddit = "https://reddit.com/user/username" },
+  ###   { slack = "https://workspace.url/team/userid" },
+  ###   { snapchat = "https://snapchat.com/add/username" },
+  ###   { soundcloud = "https://soundcloud.com/username" },
+  ###   { stack-overflow = "https://stackoverflow.com/users/userid/username" },
+  ###   { steam = "https://steamcommunity.com/profiles/userid" },
+  ###   { tumblr = "https://username.tumblr.com" },
+  ###   { whatsapp = "https://wa.me/phone-number" },
+  ###   { xing = "https://xing.com/profile/username" },
+  ]
+
+# -- Featured link buttons on the homepage --
+# Each entry renders as a clickable button below the bio.
+# Fields: title (required), url (required), description (optional), icon (optional)
+
+[[params.featured]]
+  title = "My Latest Video"
+  url = "https://youtube.com/@lamatemaga"
+  description = "Watch on YouTube"
+  icon = "youtube"
+
+#[[params.featured]]
+#  title = "Newsletter"
+#  url = "https://example.com/newsletter"
+#  description = "Subscribe for updates"
+#
+#[[params.featured]]
+#  title = "Subscribe to my Twitch channel"
+#  url = "https://example.com/newsletter"
+#  description = "Subscribe for updates"
+#  icon = "twitch"
+#
+#[[params.featured]]
+#  title = "Subscribe to my Twitch channel"
+#  url = "https://example.com/newsletter"
+#  description = "Subscribe for updates"
+#  icon = "twitch"
+#
+#[[params.featured]]
+#  title = "Subscribe to my Twitch channel"
+#  url = "https://example.com/newsletter"
+#  description = "Subscribe for updates"
+#  icon = "twitch"
+#
+#[[params.featured]]
+#  title = "Subscribe to my Twitch channel"
+#  url = "https://example.com/newsletter"
+#  description = "Subscribe for updates"
+#  icon = "twitch"
+#
+#[[params.featured]]
+#  title = "Subscribe to my Twitch channel"
+#  url = "https://example.com/newsletter"
+#  description = "Subscribe for updates"
+#  icon = "twitch"
+#
+#[[params.featured]]
+#  title = "Subscribe to my Twitch channel"
+#  url = "https://example.com/newsletter"
+#  description = "Subscribe for updates"
+#  icon = "twitch"
+#
