@@ -26,7 +26,10 @@
       {{ partialCached "author-links.html" . }}
     </div>
     {{ with site.Language.Params.Author.bio }}
-      <p class="mt-6 max-w-md text-center text-base leading-relaxed text-neutral-500 dark:text-neutral-400">
+      <style>
+        .author-bio strong { color: rgb(251, 113, 133); }
+      </style>
+      <p class="author-bio mt-6 text-center text-base leading-relaxed text-neutral-500 dark:text-neutral-400" style="width: 90%; max-width: 700px;">
         {{ . | markdownify | emojify }}
       </p>
     {{ end }}
