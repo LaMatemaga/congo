@@ -1,4 +1,1 @@
 theme = "congo"
-baseURL = 'https://congo-chi.vercel.app/'
-locale = 'en-us'
-title = 'My New Hugo Project'
