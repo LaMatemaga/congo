@@ -118,9 +118,21 @@ items:
     institution: "Zillow Group"
     location: "Remoto (Monterrey, México)"
     description: >
-      Desarrollo de visualizaciones interactivas de datos del mercado inmobiliario
-      para productos consumer y herramientas internas. Stack principal: **React**,
-      **D3.js**, **Python**, **dbt**, **Snowflake**.
+      Diseño y mantenimiento de dashboards en **Databricks** y **Tableau** para el seguimiento
+      del rendimiento de marketing en diversos canales, generando insights para la optimización de
+      campañas y dando soporte a analítica B2B y B2C para las líneas de negocio Rentals, Agents y Brand.
+      Mantenimiento de pipelines ETL de última milla con **dbt** e implementación de flujos **CI/CD**
+      en **GitLab** para despliegue y control de versiones. Desarrolló Project Startrail con **Node.js**
+      y **D3.js**, herramienta interna de visualización de linaje de datos para mapear dependencias
+      en el ecosistema de datos de Zillow, agilizando migraciones de infraestructura y la gestión de activos.
+    descriptionEN: >
+      Design and maintain **Databricks** and **Tableau** dashboards to track marketing performance
+      across various channels, delivering insights to optimize campaigns and support B2B and B2C
+      analytics for Zillow's Rentals, Agents, and Brand business lines. Maintain last-mile ETL
+      pipelines using **dbt** and implement **CI/CD** workflows through **GitLab** for data pipeline
+      deployment and version control. Built Project Startrail using **Node.js** and **D3.js**, an
+      internal data lineage visualization tool mapping dependencies across Zillow's data ecosystem,
+      streamlining infrastructure migrations and improving asset management efficiency.
     sortDate: "2025-12-01"
     startDate: "2025-12-01"
     endDate: "present"
