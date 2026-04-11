@@ -35,6 +35,11 @@
 #    target = "_blank"
 
 [[main]]
+  name = "CV"
+  pageRef = "resume"
+  weight = 10
+
+[[main]]
   identifier = "search"
   weight = 99
   [main.params]

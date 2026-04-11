@@ -1,0 +1,627 @@
+items:
+
+  # ── EDUCACIÓN ──────────────────────────────────────────────────────
+  - type: education
+    title: "Licenciatura en Matemáticas"
+    titleEN: "Bachelor's Degree in Mathematics"
+    institution: "Universidad Autónoma de Nuevo León (UANL)"
+    location: "Monterrey, México"
+    description: >
+      Programa de nueve semestres en matemáticas puras y aplicadas. Formación en **cálculo**
+      (diferencial, integral, vectorial y de varias variables), **álgebra lineal** y **álgebra
+      abstracta** (grupos, anillos y campos), **análisis matemático** y **topología**.
+      Base sólida en **probabilidad**, **estadística**, **procesos estocásticos** y **análisis
+      de regresión**. Materias aplicadas en **variable compleja**, **ecuaciones diferenciales**,
+      **geometría moderna**, **modelado matemático**, **simulación**, **optimización**,
+      **teoría de grafos** e **investigación de operaciones**.
+      <br><br>
+      Investigación en **bioinformática**: procesamiento de ~140,000 secuencias de la proteína
+      Spike del SARS-CoV-2 desde **NCBI** con **R** para cinco modelos de análisis de datos,
+      combinando minería de datos, **Random Forest**, **Análisis Topológico de Datos** y simulación
+      computacional (publicado en revista indexada). Proyecto adicional en análisis de series de
+      tiempo en pacientes con epilepsia. Impartió un curso de **R** y un taller de minería de
+      datos a más de 700 estudiantes, y co-organizó la primera escuela de verano de modelado en
+      la UANL, con más de 300 participantes de habla hispana.
+    descriptionEN: >
+      Nine-semester program in pure and applied mathematics. Coursework in **calculus**
+      (differential, integral, vector, and multivariable), **linear algebra**, and **abstract
+      algebra** (groups, rings, and fields), **mathematical analysis**, and **topology**.
+      Strong foundation in **probability**, **statistics**, **stochastic processes**, and
+      **regression analysis**. Applied studies in **complex variables**, **differential equations**,
+      **modern geometry**, **mathematical modeling**, **simulation**, **optimization**,
+      **graph theory**, and **operations research**.
+      <br><br>
+      Research in **bioinformatics**: extracted and processed ~140,000 SARS-CoV-2 Spike protein
+      sequences from **NCBI** using **R** to build five data analysis models combining data mining,
+      **Random Forest**, **Topological Data Analysis**, and computational simulation (published in an
+      indexed journal). Additional project on time series analysis in epilepsy patients.
+      Taught an **R** course and a data mining workshop to 700+ students, and co-organized the
+      first summer school on modeling at UANL, reaching 300+ Spanish-speaking participants.
+    sortDate: "2018-01-22"
+    startDate: "2018-01-22"
+    endDate: "2022-12-15"   # no recuerdo el dia exacto, pero fue en diciembre
+    url: "https://www.fcfm.uanl.mx/"
+
+  # ── PROFESIONAL ────────────────────────────────────────────────────
+
+  - type: professional
+    title: "Analista de Datos B2B"
+    titleEN: "B2B Data Analyst"
+    institution: "Hey Banco"
+    location: "Monterrey, México"
+    description: >
+      Automatización de datos con **Amazon Redshift** para más de 20 visualizaciones en **Looker Studio**
+      para cuatro equipos. Coordinación de bases de datos para diez journeys de clientes en
+      **Salesforce Marketing Cloud**, aumentando la conversión entre etapas del ciclo de vida.
+      Integración de **Amazon S3** y **SageMaker** para cuatro dashboards de monitoreo en **Tableau**.
+      Documentación de nueve procesos recurrentes y reescritura de un **Jupyter Notebook** en **Python**
+      que redujo los tiempos de carga en **Tableau** de minutos a segundos.
+    descriptionEN: >
+      Automated data extraction with **Amazon Redshift** to power 20+ **Looker Studio** dashboards across
+      four teams. Coordinated databases for ten **Salesforce Marketing Cloud** customer journeys,
+      improving lifecycle stage conversion. Integrated **Amazon S3** and **SageMaker** pipelines feeding
+      four **Tableau** monitoring dashboards. Documented nine recurring processes and refactored a
+      **Python** **Jupyter Notebook**, reducing **Tableau** load times from minutes to seconds.
+    sortDate: "2021-12-01"
+    startDate: "2021-12-20"
+    endDate: "2023-08-05" # No estoy segura jeje
+    url: "https://banco.hey.inc"
+
+  - type: professional
+    title: "Data Engineer"
+    institution: "The Ksquare Group"
+    location: "Remoto (Monterrey, México)"
+    description: >
+      Aseguró la calidad de datos en una base de datos **Databricks Delta Lake**, garantizando
+      la precisión e integridad de la información a través de diversos pipelines.
+      Creó visualizaciones detalladas en **Power BI** para comunicar insights accionables
+      a stakeholders. Desarrolló un KPI de Confidence Score para vincular, emparejar y fusionar
+      registros, mejorando la exactitud de datos de pacientes en un proyecto de salud.
+      Realizó auditorías regulares e implementó medidas de control de calidad. Colaboró con
+      equipos multifuncionales para traducir requerimientos de datos en soluciones técnicas.
+    descriptionEN: >
+      Secured data quality on a **Databricks Delta Lake** database, ensuring accuracy and integrity
+      across various pipelines. Created detailed **Power BI** visualizations providing actionable
+      insights to stakeholders. Developed a Confidence Score KPI to link, match, and merge records,
+      improving patient data accuracy for a healthcare project. Conducted regular data audits and
+      implemented quality control measures. Collaborated with cross-functional teams to translate
+      data requirements into technical solutions.
+    sortDate: "2023-08-01"
+    startDate: "2023-08-06"  # No recuerdo jejeje
+    endDate: "2024-05-31"
+    url: "https://www.theksquaregroup.com/"
+
+  - type: professional
+    title: "Data Analyst"
+    institution: "Honeywell"
+    location: "Monterrey, México"
+    description: >
+      Diseño y mantenimiento de dashboards en **Tableau** y **Power BI** para el seguimiento de KPIs de
+      compras y detección de anomalías en datos provenientes de **Snowflake** y documentos de
+      **SharePoint**, habilitando la toma de decisiones proactiva y reducción de costos.
+      Migración de flujos de datos en **Tableau Prep** y dashboards de **Tableau** a **SQL**,
+      **Power Query**, **Power Automate** y **Power BI** como parte de un esfuerzo de unificación
+      tecnológica en la organización.
+    descriptionEN: >
+      Designed and maintained **Tableau** and **Power BI** dashboards to track procurement KPIs and
+      detect data anomalies, leveraging data from **Snowflake** and **SharePoint** for proactive
+      decision-making and cost savings. Migrated **Tableau Prep** dataflows and **Tableau** dashboards
+      to **SQL**, **Power Query**, **Power Automate**, and **Power BI** as part of a stack unification
+      initiative across the organization.
+    sortDate: "2024-07-01"
+    startDate: "2024-07-29"
+    endDate: "2025-11-28"
+    url: "https://www.honeywell.com/mx/es"
+
+  - type: professional
+    title: "Data Visualization Engineer"
+    institution: "Zillow Group"
+    location: "Remoto (Monterrey, México)"
+    description: >
+      Desarrollo de visualizaciones interactivas de datos del mercado inmobiliario
+      para productos consumer y herramientas internas. Stack principal: **React**,
+      **D3.js**, **Python**, **dbt**, **Snowflake**.
+    sortDate: "2025-12-01"
+    startDate: "2025-12-01"
+    endDate: "present"
+    url: "https://www.zillow.com"
+
+
+  # ── VOLUNTARIADO ───────────────────────────────────────────────────
+#  - type: volunteering
+#    title: "AWS User Group Lead"
+#    institution: "AWS User Group Monterrey"
+#    location: "Monterrey, México"
+#    description: >
+#      Comunidad local que se reúne para compartir ideas, responder preguntas y aprender
+#      sobre los servicios de **AWS** y prácticas recomendadas.
+#    descriptionEN: >
+#      Local community gathering to share ideas, answer questions, and learn about
+#      **AWS** services and best practices.
+#    sortDate: "2023-03-01"
+#    startDate: "2023-03"
+#    endDate: "present"
+#    url: "https://www.meetup.com/awsugmty/"
+#
+#  - type: volunteering
+#    title: "AWS Community Builder"
+#    institution: "Amazon Web Services (AWS)"
+#    location: "Monterrey, México"
+#    description: >
+#      Programa de **AWS** para líderes emergentes apasionados por compartir conocimientos
+#      y conectarse con la comunidad técnica.
+#    descriptionEN: >
+#      **AWS** program for emerging leaders passionate about sharing knowledge
+#      and connecting with the technical community.
+#    sortDate: "2023-02-01"
+#    startDate: "2023-02"
+#    endDate: "present"
+#
+#  - type: volunteering
+#    title: "Embajadora"
+#    titleEN: "Ambassador"
+#    institution: "Women Techmakers (Google)"
+#    location: "Monterrey, México"
+#    description: >
+#      Iniciativa global de Google dedicada a visibilizar y empoderar a las mujeres en tecnología
+#      mediante recursos y comunidad. Actualmente, el programa y su misión han sido transferidos
+#      a **Technovation Girls**, continuando su impacto en la formación de la próxima generación
+#      de líderes en STEM.
+#    descriptionEN: >
+#      Google's global initiative dedicated to empowering women in technology through resources
+#      and community. The program and its mission have since been transferred to **Technovation Girls**,
+#      continuing its impact in shaping the next generation of STEM leaders.
+#    sortDate: "2022-11-01"
+#    startDate: "2022-11"
+#    endDate: "2025-10-03"
+#    url: "https://www.technovation.org/women-techmakers/"
+#
+#  - type: volunteering
+#    title: "Creación de Contenido"
+#    titleEN: "Content Creator"
+#    institution: "Científicas Mexicanas"
+#    location: "Virtual"
+#    description: >
+#      Colaboradora y creadora de contenido para la plataforma en **Twitter (X)**,
+#      dedicada a la divulgación científica y la visibilización del trabajo de mujeres en STEM.
+#    descriptionEN: >
+#      Content collaborator and creator on **Twitter (X)**, focused on science communication
+#      and the visibility of women's work in STEM.
+#    sortDate: "2021-02-01"
+#    startDate: "2021-02"
+#    endDate: "2021-11"
+#
+#  - type: volunteering
+#    title: "Entrenadora — Olimpiadas de Física"
+#    titleEN: "Coach — Physics Olympics"
+#    institution: "Delegación Estatal de Nuevo León"
+#    location: "Monterrey, México"
+#    description: >
+#      Preparación de los participantes que representarían al estado de Nuevo León
+#      en la Olimpiada Nacional de Física.
+#    descriptionEN: >
+#      Coaching students representing the state of Nuevo León
+#      in the National Physics Olympiad.
+#    sortDate: "2013-01-01"
+#    startDate: "2013"
+#    endDate: "2016"
+#
+#  - type: volunteering
+#    title: "Entrenadora — Olimpiadas de Matemáticas"
+#    titleEN: "Coach — Mathematics Olympics"
+#    institution: "Delegación Estatal de Nuevo León"
+#    location: "Monterrey, México"
+#    description: >
+#      Preparación de los participantes que representarían al estado de Nuevo León
+#      en la Olimpiada Nacional de Matemáticas.
+#    descriptionEN: >
+#      Coaching students representing the state of Nuevo León
+#      in the National Mathematics Olympiad.
+#    sortDate: "2013-01-01"
+#    startDate: "2013"
+#    endDate: "2016"
+#
+#  - type: volunteering
+#    title: "Entrenadora — Club de Matemáticas Avanzadas"
+#    titleEN: "Coach — Advanced Mathematics Club"
+#    institution: "CIDEB"
+#    location: "Monterrey, México"
+#    description: >
+#      Preparación de los participantes que representarían al Centro de Investigación
+#      y Desarrollo de Educación Bilingüe en competencias de matemáticas.
+#    descriptionEN: >
+#      Coaching students representing CIDEB (Center for Research and Development
+#      in Bilingual Education) in mathematics competitions.
+#    sortDate: "2012-09-01"
+#    startDate: "2012-09"
+#    endDate: "2013-06"
+#
+#  # ── PUBLICACIONES ──────────────────────────────────────────────────
+#  - type: publication
+#    title: "Roles en la industria Tech explicados como si fueran un RPG"
+#    institution: "Tacos de Datos / Medium"
+#    description: >
+#      Artículo de divulgación que explica los distintos roles en la industria tecnológica
+#      usando la analogía de un videojuego de rol (RPG).
+#    sortDate: "2023-02-08"
+#    date: "2023-02"
+#    url: "https://www.tacosdedatos.com/lamatemaga/roles-en-la-industria-tech-explicados-como-si-fueran-un-rpg-3b36"
+#
+#  - type: publication
+#    title: "About Roles in Tech, but RPG edition"
+#    institution: "Hashnode — Elaia's Journey Through Data"
+#    description: >
+#      English version of the article explaining tech industry roles through an RPG analogy.
+#    sortDate: "2023-02-07"
+#    date: "2023-02"
+#    url: "https://lamatemaga.hashnode.dev/about-roles-in-tech-but-rpg-edition"
+#
+#  - type: publication
+#    title: "La Percepción del Tiempo"
+#    institution: "La Biozona"
+#    description: >
+#      Artículo de divulgación sobre la percepción psicológica y neurológica del tiempo.
+#    sortDate: "2022-12-26"
+#    date: "2022-12-26"
+#    url: "https://www.labiozona.com/percepcion-tiempo/"
+#
+#  - type: publication
+#    title: "Matemáticas: ¿creación o conquista?"
+#    institution: "La Biozona"
+#    description: >
+#      Artículo de divulgación sobre la filosofía de las matemáticas: ¿son inventadas o descubiertas?
+#    sortDate: "2022-09-20"
+#    date: "2022-09-20"
+#    url: "https://www.labiozona.com/matematicas-creacion-conquista/"
+#
+#  - type: publication
+#    title: "Trivialidades: Ley de Ampère"
+#    institution: "Revista Estudiantil COMEMAT"
+#    description: >
+#      Artículo publicado en la revista estudiantil de la Comunidad de Estudiantes de Matemáticas.
+#      Vol. 3, pp. 26–27.
+#    sortDate: "2020-01-01"
+#    date: "2020-01"
+#
+#  # ── PREMIOS ────────────────────────────────────────────────────────
+#  - type: award
+#    title: "Beca Fundación TELMEX"
+#    institution: "Fundación TELMEX"
+#    location: "México"
+#    description: >
+#      Beca de excelencia académica otorgada por la Fundación TELMEX
+#      (septiembre 2018 – agosto 2019).
+#    descriptionEN: >
+#      Academic excellence scholarship awarded by Fundación TELMEX
+#      (September 2018 – August 2019).
+#    sortDate: "2018-09-01"
+#    date: "2018-09"
+#
+#  - type: award
+#    title: "Medalla de Oro — 6ª Competencia Nacional de Física para Secundaria"
+#    titleEN: "Gold Medal — 6th National Physics Competition (Middle School)"
+#    institution: "México"
+#    sortDate: "2010-01-01"
+#    date: "2010-01"
+#
+#  - type: award
+#    title: "Medalla de Oro — 8ª Olimpiada Nacional de Matemáticas para Secundaria"
+#    titleEN: "Gold Medal — 8th National Mathematics Olympiad (Middle School)"
+#    institution: "México"
+#    sortDate: "2008-01-01"
+#    date: "2008-01"
+#
+#  # ── ACTIVIDAD CIENTÍFICA (CONGRESOS) ───────────────────────────────
+#  - type: conference
+#    tag: "science"
+#    title: "COMEMAT: Actividades, aprendizajes y colaboración"
+#    institution: "LV Congreso Nacional de Matemáticas — SMM"
+#    location: "Guadalajara, México"
+#    description: >
+#      Conferencia presentada en el área especial de Capítulos Estudiantiles.
+#    sortDate: "2022-10-23"
+#    date: "2022-10"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Spatial-Temporal Variability of SARS-CoV-2 Spike Protein and Its Effects in COVID-19 Disease Outbreaks"
+#    institution: "8th European Seminar on Computing (ESCO)"
+#    location: "Pilsen, República Checa"
+#    description: >
+#      Variabilidad espacio-temporal de la proteína Spike del SARS-CoV-2 y su efecto
+#      en los brotes de COVID-19. Primer congreso internacional presencial asistido.
+#    sortDate: "2022-06-13"
+#    date: "2022-06"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Simetrías en la Música: analizando ritmos del Son Jarocho"
+#    institution: "LIV Congreso Nacional de Matemáticas — SMM"
+#    location: "Virtual (YouTube & Zoom)"
+#    description: >
+#      Conferencia en el área de Álgebra sobre el análisis matemático de los ritmos
+#      del Son Jarocho mediante herramientas de teoría de grupos.
+#    sortDate: "2021-10-18"
+#    date: "2021-10"
+#    url: "https://www.youtube.com/watch?v=7gKjuyX3loo"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Caracterización de la variabilidad de la proteína Spike del SARS-CoV-2 con Análisis Topológico de Datos"
+#    titleEN: "Characterization of Spike Protein Variability of SARS-CoV-2 with Topological Data Analysis"
+#    institution: "LIV Congreso Nacional de Matemáticas — SMM"
+#    location: "Virtual (YouTube & Zoom)"
+#    description: >
+#      Conferencia en el área de Biomatemáticas sobre el uso de **Análisis Topológico
+#      de Datos** para caracterizar la variabilidad de la proteína Spike.
+#    sortDate: "2021-10-19"
+#    date: "2021-10"
+#    url: "https://www.youtube.com/watch?v=jhrkCuX_7a8"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Variabilidad espacio-temporal de la proteína Spike del SARS-CoV-2 y su efecto en los brotes de COVID-19"
+#    institution: "2nd Women in Bioinformatics and Data Science"
+#    location: "Virtual (YouTube)"
+#    description: >
+#      Conferencia sobre los patrones espacio-temporales de virulencia e infectividad
+#      asociados a mutaciones en la proteína Spike.
+#    sortDate: "2021-07-23"
+#    date: "2021-07"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Variabilidad espacio-temporal de la proteína Spike del SARS-CoV-2 y su efecto en los brotes de COVID-19"
+#    institution: "7th Student Council Symposium — ISCB"
+#    location: "Virtual (Airmeet)"
+#    description: >
+#      Conferencia en el simposio estudiantil de la International Society of Computational Biology.
+#    sortDate: "2021-07-23"
+#    date: "2021-07"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Patrones espacio-temporales de virulencia e infectividad en la proteína Spike del SARS-CoV-2"
+#    institution: "3ª Semana de la Matemática — COMEMAT"
+#    location: "Virtual (Facebook Live)"
+#    sortDate: "2021-03-14"
+#    date: "2021-03"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Patrones espacio-temporales de virulencia e infectividad en la proteína Spike del SARS-CoV-2"
+#    institution: "Encuentro de Jóvenes Investigadores — Nuevo León"
+#    location: "Virtual (Microsoft Teams)"
+#    sortDate: "2020-11-18"
+#    date: "2020-11"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Variability characterization in SARS-CoV-2 Spike protein and its possible impact on vaccine development"
+#    institution: "2° Congreso Internacional de Nanobioingeniería — CIBYN"
+#    location: "Virtual (Livestorm)"
+#    sortDate: "2020-10-24"
+#    date: "2020-10"
+#
+#  - type: conference
+#    tag: "science"
+#    title: "Uso del exponente de Hurst para análisis de series de tiempo"
+#    titleEN: "Use of the Hurst Exponent for Time Series Analysis"
+#    institution: "LII Congreso Nacional de Matemáticas — SMM"
+#    location: "Monterrey, México"
+#    description: >
+#      Conferencia sobre el exponente de Hurst como herramienta de análisis de series de tiempo,
+#      aplicado a señales de EEG de pacientes con epilepsia.
+#    sortDate: "2019-10-21"
+#    date: "2019-10"
+#
+#  # ── TALLERES IMPARTIDOS ────────────────────────────────────────────
+#  - type: conference
+#    tag: "workshop"
+#    title: "Minería de Datos Aplicada a Secuencias de Proteínas"
+#    titleEN: "Data Mining Applied to Protein Sequences"
+#    institution: "Cátedra Ing. Guadalupe Cedillo — UANL"
+#    location: "Virtual (Zoom & Facebook Live)"
+#    description: >
+#      Taller impartido en colaboración con BC Sanmiguel-Mercado, JD López de la Cruz,
+#      F. Hernández-Cabrera y FJ Almaguer-Martínez.
+#    sortDate: "2021-08-25"
+#    date: "2021-08"
+#
+#  - type: conference
+#    tag: "workshop"
+#    title: "SARS-CoV-2 y Minería de Datos en Bioinformática"
+#    titleEN: "SARS-CoV-2 and Data Mining in Bioinformatics"
+#    institution: "RLadies Guadalajara"
+#    location: "Virtual (Zoom)"
+#    sortDate: "2021-07-09"
+#    date: "2021-07"
+#
+#  - type: conference
+#    tag: "workshop"
+#    title: "Introducción al Análisis de Datos con R"
+#    titleEN: "Introduction to Data Analysis with R"
+#    institution: "I EVMHAD — UANL"
+#    location: "Virtual (Microsoft Teams)"
+#    description: >
+#      Taller impartido durante la I Escuela de Modelación y Herramientas para el Análisis de Datos
+#      con aplicaciones en Epidemiología, Bioinformática, Biología y Ciencias de la Tierra.
+#    sortDate: "2021-07-05"
+#    date: "2021-07"
+#
+#  # ── ACTIVIDADES DE DIVULGACIÓN ─────────────────────────────────────
+#  - type: conference
+#    tag: "outreach"
+#    title: "Ciencia de Datos y Matemáticas feat Cynthia «La Matemaga» Castillo"
+#    institution: "Chile, Mole & Tech — Podcast (cap. 71, temp. 2)"
+#    location: "Virtual"
+#    sortDate: "2024-12-04"
+#    date: "2024-12"
+#    url: "https://youtu.be/vPDb9ERN-GM"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "Más allá de Excel: Impulsa tu carrera en análisis de datos"
+#    institution: "CODIGO FEST — Código Facilito"
+#    location: "Virtual"
+#    sortDate: "2024-10-28"
+#    date: "2024-10"
+#    url: "https://youtu.be/XKt1pOwKPdQ"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "¿Quién puso este perro en mi caja para gatos?"
+#    institution: "Data Science Weekend Vol. 2 — MLSA Latam"
+#    location: "Virtual"
+#    sortDate: "2022-12-02"
+#    date: "2022-12"
+#    url: "https://www.youtube.com/watch?v=9By-vTzXmak"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "Hey, Cynthia — Hey, Digital Bankers"
+#    institution: "Hey Banco"
+#    location: "Virtual"
+#    sortDate: "2022-12-02"
+#    date: "2022-12"
+#    url: "https://youtu.be/Er2z1lIq9is"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "Platicando con Cynthia Castillo (@LaMatemaga de R)"
+#    institution: "Canal de Antonio Feregrino"
+#    location: "Virtual (YouTube)"
+#    sortDate: "2022-03-10"
+#    date: "2022-03"
+#    url: "https://www.youtube.com/live/zKUfRd7SqRc"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "La vida es como un juego de azar — El Menester de las Luciérnagas"
+#    institution: "Ciencillamente — Podcast (cap. 24)"
+#    location: "Virtual"
+#    sortDate: "2021-12-06"
+#    date: "2021-12"
+#    url: "https://youtu.be/m7LslToiJb8"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "Mi Talento — Pensamiento Matemático"
+#    institution: "Secretaría de Educación — Canal Ingenio TV 14.2"
+#    location: "México"
+#    sortDate: "2021-11-03"
+#    date: "2021-11"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "¿Cómo llegué a la Bioinformática?"
+#    titleEN: "How did I get into Bioinformatics?"
+#    institution: "ITESM — Curso de Bioinformática"
+#    location: "Virtual (Zoom)"
+#    sortDate: "2021-04-27"
+#    date: "2021-04"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "¿Cómo detener una epidemia usando geometría?"
+#    titleEN: "How to Stop an Epidemic Using Geometry?"
+#    institution: "Seminario Internacional Historia de las Matemáticas"
+#    location: "Virtual (Facebook Live)"
+#    sortDate: "2021-03-24"
+#    date: "2021-03"
+#
+#  - type: conference
+#    tag: "outreach"
+#    title: "¿Qué hacemos los matemáticos?"
+#    titleEN: "What Do Mathematicians Do?"
+#    institution: "De Joven a Joven — LII Congreso Nacional de Matemáticas, SMM"
+#    location: "Monterrey, México"
+#    sortDate: "2019-10-21"
+#    date: "2019-10"
+#
+#  # ── COMITÉS ORGANIZADORES ──────────────────────────────────────────
+#  - type: organizing
+#    tag: "science"
+#    title: "Coordinadora de Staff — LIV Congreso Nacional de Matemáticas"
+#    titleEN: "Staff Coordinator — 54th National Mathematics Congress"
+#    institution: "Sociedad Matemática Mexicana"
+#    location: "Virtual (Zoom & YouTube)"
+#    sortDate: "2021-10-18"
+#    date: "2021-10"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Co-organizadora — I EVMHAD"
+#    titleEN: "Co-organizer — I EVMHAD"
+#    institution: "UANL (FCFM, FCT, FCB)"
+#    location: "Virtual (Microsoft Teams)"
+#    description: >
+#      I Escuela de Modelación y Herramientas para el Análisis de Datos con aplicaciones
+#      en Epidemiología, Bioinformática, Biología y Ciencias de la Tierra. Más de 300 participantes.
+#    descriptionEN: >
+#      First School of Modeling and Tools for Data Analysis with applications in
+#      Epidemiology, Bioinformatics, Biology, and Earth Sciences. 300+ participants.
+#    sortDate: "2021-07-05"
+#    date: "2021-07"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Staff — V Encuentro Conjunto RSME–SMM"
+#    institution: "Real Sociedad Matemática Española & SMM"
+#    location: "Virtual (YouTube & Zoom)"
+#    sortDate: "2021-06-14"
+#    date: "2021-06"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Organizadora — 3ª Semana de la Matemática"
+#    titleEN: "Organizer — 3rd Mathematics Week"
+#    institution: "COMEMAT"
+#    location: "Monterrey, México"
+#    sortDate: "2021-03-14"
+#    date: "2021-03"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Coordinadora de Staff — LIII Congreso Nacional Virtual de Matemáticas"
+#    titleEN: "Staff Coordinator — 53rd National Mathematics Congress"
+#    institution: "Sociedad Matemática Mexicana"
+#    location: "Virtual (Zoom)"
+#    sortDate: "2020-10-19"
+#    date: "2020-10"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Organizadora — 2ª Semana de la Matemática"
+#    titleEN: "Organizer — 2nd Mathematics Week"
+#    institution: "COMEMAT"
+#    location: "Monterrey, México"
+#    sortDate: "2020-07-20"
+#    date: "2020-07"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Staff — LII Congreso Nacional de Matemáticas"
+#    titleEN: "Staff — 52nd National Mathematics Congress"
+#    institution: "Sociedad Matemática Mexicana"
+#    location: "Monterrey, México"
+#    sortDate: "2019-10-21"
+#    date: "2019-10"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Co-organizadora — Matemáticas en la Calle"
+#    titleEN: "Co-organizer — Mathematics in the Street"
+#    institution: "Sociedad Matemática Mexicana"
+#    location: "Monterrey, México"
+#    sortDate: "2019-10-16"
+#    date: "2019-10"
+#
+#  - type: organizing
+#    tag: "science"
+#    title: "Organizadora — 1ª Semana de la Matemática"
+#    titleEN: "Organizer — 1st Mathematics Week"
+#    institution: "COMEMAT"
+#    location: "Monterrey, México"
+#    sortDate: "2019-09-02"
+#    date: "2019-09"

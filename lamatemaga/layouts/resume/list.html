@@ -1,0 +1,391 @@
+{{ define "main" }}
+
+  {{/* ── Load and sort data: newest first by default ── */}}
+  {{ $items := $.Site.Data.resume.items }}
+  {{ $sorted := sort $items "sortDate" "desc" }}
+
+  {{/* ── Section definitions ── */}}
+  {{ $isEN := eq $.Site.Language.LanguageCode "en" }}
+  {{ $sections := slice
+    (dict "type" "professional"    "sfx" "professional"  "emoji" "💼" "label" "Experiencia profesional" "labelEN" "Professional experience")
+    (dict "type" "education"       "sfx" "education"     "emoji" "🎓" "label" "Educación"               "labelEN" "Education")
+    (dict "type" "volunteering"    "sfx" "volunteering"  "emoji" "🤝" "label" "Voluntariado"             "labelEN" "Volunteering")
+    (dict "type" "extra-education" "sfx" "extra"         "emoji" "✨" "label" "Formación adicional"      "labelEN" "Extra training")
+    (dict "type" "organizing"      "sfx" "organizing"    "emoji" "📋" "label" "Organización"             "labelEN" "Organizing")
+    (dict "type" "conference"      "sfx" "conference"    "emoji" "🎤" "label" "Conferencias y charlas"   "labelEN" "Talks & conferences")
+    (dict "type" "publication"     "sfx" "publication"   "emoji" "📝" "label" "Publicaciones"            "labelEN" "Publications")
+    (dict "type" "award"           "sfx" "award"         "emoji" "🏅" "label" "Premios"                  "labelEN" "Awards")
+  }}
+
+  {{/* ── CSS ── */}}
+  <style>
+    /* Section heading accent lines */
+    .tl-heading-education    { border-color: #e11d48; }
+    .tl-heading-professional { border-color: #16a34a; }
+    .tl-heading-extra        { border-color: #d97706; }
+    .tl-heading-organizing   { border-color: #7c3aed; }
+    .tl-heading-conference   { border-color: #0891b2; }
+    .tl-heading-volunteering { border-color: #ea580c; }
+    .tl-heading-publication  { border-color: #4f46e5; }
+    .tl-heading-award        { border-color: #ca8a04; }
+
+    /* Section heading emoji bg pill */
+    .tl-pill-education    { background-color: #ffe4e6; color: #9f1239; }
+    .tl-pill-professional { background-color: #dcfce7; color: #14532d; }
+    .tl-pill-extra        { background-color: #fef3c7; color: #78350f; }
+    .tl-pill-organizing   { background-color: #ede9fe; color: #4c1d95; }
+    .tl-pill-conference   { background-color: #cffafe; color: #164e63; }
+    .tl-pill-volunteering { background-color: #fff7ed; color: #9a3412; }
+    .tl-pill-publication  { background-color: #eef2ff; color: #3730a3; }
+    .tl-pill-award        { background-color: #fefce8; color: #854d0e; }
+
+    .dark .tl-pill-education    { background-color: #4c0519; color: #fda4af; }
+    .dark .tl-pill-professional { background-color: #052e16; color: #86efac; }
+    .dark .tl-pill-extra        { background-color: #451a03; color: #fcd34d; }
+    .dark .tl-pill-organizing   { background-color: #2e1065; color: #c4b5fd; }
+    .dark .tl-pill-conference   { background-color: #083344; color: #67e8f9; }
+    .dark .tl-pill-volunteering { background-color: #431407; color: #fdba74; }
+    .dark .tl-pill-publication  { background-color: #1e1b4b; color: #a5b4fc; }
+    .dark .tl-pill-award        { background-color: #422006; color: #fde047; }
+
+    /* Timeline dots */
+    .tl-dot-education    { background-color: #e11d48; }
+    .tl-dot-professional { background-color: #16a34a; }
+    .tl-dot-extra        { background-color: #d97706; }
+    .tl-dot-organizing   { background-color: #7c3aed; }
+    .tl-dot-conference   { background-color: #0891b2; }
+    .tl-dot-volunteering { background-color: #ea580c; }
+    .tl-dot-publication  { background-color: #4f46e5; }
+    .tl-dot-award        { background-color: #ca8a04; }
+
+    /* Timeline vertical line */
+    .tl-line-education    { background-color: #fda4af; }
+    .tl-line-professional { background-color: #86efac; }
+    .tl-line-extra        { background-color: #fcd34d; }
+    .tl-line-organizing   { background-color: #c4b5fd; }
+    .tl-line-conference   { background-color: #67e8f9; }
+    .tl-line-volunteering { background-color: #fed7aa; }
+    .tl-line-publication  { background-color: #c7d2fe; }
+    .tl-line-award        { background-color: #fef08a; }
+
+    .dark .tl-line-education    { background-color: #4c0519; }
+    .dark .tl-line-professional { background-color: #052e16; }
+    .dark .tl-line-extra        { background-color: #451a03; }
+    .dark .tl-line-organizing   { background-color: #2e1065; }
+    .dark .tl-line-conference   { background-color: #083344; }
+    .dark .tl-line-volunteering { background-color: #431407; }
+    .dark .tl-line-publication  { background-color: #1e1b4b; }
+    .dark .tl-line-award        { background-color: #422006; }
+
+    /* Card left borders */
+    .tl-card-education    { border-left: 3px solid #e11d48; }
+    .tl-card-professional { border-left: 3px solid #16a34a; }
+    .tl-card-extra        { border-left: 3px solid #d97706; }
+    .tl-card-organizing   { border-left: 3px solid #7c3aed; }
+    .tl-card-conference   { border-left: 3px solid #0891b2; }
+    .tl-card-volunteering { border-left: 3px solid #ea580c; }
+    .tl-card-publication  { border-left: 3px solid #4f46e5; }
+    .tl-card-award        { border-left: 3px solid #ca8a04; }
+
+    /* Date badges — light */
+    .tl-badge-education    { background-color: #ffe4e6; color: #9f1239; }
+    .tl-badge-professional { background-color: #dcfce7; color: #14532d; }
+    .tl-badge-extra        { background-color: #fef3c7; color: #78350f; }
+    .tl-badge-organizing   { background-color: #ede9fe; color: #4c1d95; }
+    .tl-badge-conference   { background-color: #cffafe; color: #164e63; }
+    .tl-badge-volunteering { background-color: #fff7ed; color: #9a3412; }
+    .tl-badge-publication  { background-color: #eef2ff; color: #3730a3; }
+    .tl-badge-award        { background-color: #fefce8; color: #854d0e; }
+
+    /* Date badges — dark */
+    .dark .tl-badge-education    { background-color: #4c0519; color: #fda4af; }
+    .dark .tl-badge-professional { background-color: #052e16; color: #86efac; }
+    .dark .tl-badge-extra        { background-color: #451a03; color: #fcd34d; }
+    .dark .tl-badge-organizing   { background-color: #2e1065; color: #c4b5fd; }
+    .dark .tl-badge-conference   { background-color: #083344; color: #67e8f9; }
+    .dark .tl-badge-volunteering { background-color: #431407; color: #fdba74; }
+    .dark .tl-badge-publication  { background-color: #1e1b4b; color: #a5b4fc; }
+    .dark .tl-badge-award        { background-color: #422006; color: #fde047; }
+
+    /* Institution / location text colors — light */
+    .tl-meta-education    { color: #be123c; }
+    .tl-meta-professional { color: #15803d; }
+    .tl-meta-extra        { color: #b45309; }
+    .tl-meta-organizing   { color: #6d28d9; }
+    .tl-meta-conference   { color: #0e7490; }
+    .tl-meta-volunteering { color: #c2410c; }
+    .tl-meta-publication  { color: #4338ca; }
+    .tl-meta-award        { color: #a16207; }
+
+    /* Institution / location text colors — dark */
+    .dark .tl-meta-education    { color: #fb7185; }
+    .dark .tl-meta-professional { color: #4ade80; }
+    .dark .tl-meta-extra        { color: #fbbf24; }
+    .dark .tl-meta-organizing   { color: #a78bfa; }
+    .dark .tl-meta-conference   { color: #22d3ee; }
+    .dark .tl-meta-volunteering { color: #fb923c; }
+    .dark .tl-meta-publication  { color: #818cf8; }
+    .dark .tl-meta-award        { color: #facc15; }
+
+    /* Technology highlights inside descriptions */
+    .tl-card-education    .tl-desc strong { color: #be123c; text-decoration: underline; font-weight: inherit; font-style: italic; }
+    .tl-card-professional .tl-desc strong { color: #15803d; text-decoration: underline; font-weight: inherit; font-style: italic; }
+    .tl-card-extra        .tl-desc strong { color: #b45309; text-decoration: underline; font-weight: inherit; font-style: italic; }
+    .tl-card-organizing   .tl-desc strong { color: #6d28d9; text-decoration: underline; font-weight: inherit; font-style: italic; }
+    .tl-card-conference   .tl-desc strong { color: #0e7490; text-decoration: underline; font-weight: inherit; font-style: italic; }
+    .tl-card-volunteering .tl-desc strong { color: #c2410c; text-decoration: underline; font-weight: inherit; font-style: italic; }
+    .tl-card-publication  .tl-desc strong { color: #4338ca; text-decoration: underline; font-weight: inherit; font-style: italic; }
+    .tl-card-award        .tl-desc strong { color: #a16207; text-decoration: underline; font-weight: inherit; font-style: italic; }
+
+    .dark .tl-card-education    .tl-desc strong { color: #fb7185; }
+    .dark .tl-card-professional .tl-desc strong { color: #4ade80; }
+    .dark .tl-card-extra        .tl-desc strong { color: #fbbf24; }
+    .dark .tl-card-organizing   .tl-desc strong { color: #a78bfa; }
+    .dark .tl-card-conference   .tl-desc strong { color: #22d3ee; }
+    .dark .tl-card-volunteering .tl-desc strong { color: #fb923c; }
+    .dark .tl-card-publication  .tl-desc strong { color: #818cf8; }
+    .dark .tl-card-award        .tl-desc strong { color: #facc15; }
+
+    /* Card hover */
+    .tl-card {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .tl-card:hover {
+      transform: translateX(3px);
+      box-shadow: 0 2px 12px 0 rgb(0 0 0 / 0.08);
+    }
+
+    /* Tag badges */
+    .tag-badge {
+      display: inline-block;
+      border-radius: 9999px;
+      padding: 0.1rem 0.55rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.3rem;
+    }
+    .tag-tech     { background: #dbeafe; color: #1d4ed8; }
+    .tag-science  { background: #d1fae5; color: #065f46; }
+    .tag-workshop { background: #ede9fe; color: #5b21b6; }
+    .tag-outreach { background: #fce7f3; color: #9d174d; }
+    .dark .tag-tech     { background: #1e3a5f; color: #93c5fd; }
+    .dark .tag-science  { background: #064e3b; color: #6ee7b7; }
+    .dark .tag-workshop { background: #2e1065; color: #c4b5fd; }
+    .dark .tag-outreach { background: #500724; color: #f9a8d4; }
+  </style>
+
+  {{/* ── Page header + sort toggle ── */}}
+  <div class="mb-8 flex flex-wrap items-start justify-between gap-4">
+    <header>
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title }}
+      </h1>
+      {{ with .Content }}
+        <div class="prose mt-1 dark:prose-invert">{{ . | emojify }}</div>
+      {{ end }}
+    </header>
+
+    <button
+      id="sort-toggle"
+      onclick="tlToggleSort()"
+      class="mt-2 rounded-full border border-neutral-300 bg-neutral-100 px-4 py-1.5 text-sm font-medium text-neutral-700 transition-colors hover:border-primary-400 hover:bg-primary-50 hover:text-primary-700 dark:border-neutral-600 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:border-primary-500 dark:hover:bg-neutral-600 dark:hover:text-primary-300"
+    >
+      ↓ {{ if $isEN }}Newest first{{ else }}Más reciente primero{{ end }}
+    </button>
+  </div>
+
+  {{/* ── Sections ── */}}
+  {{ range $sections }}
+    {{ $sec := . }}
+
+    {{/* Collect items for this section, preserving sort order */}}
+    {{ $secItems := slice }}
+    {{ range $sorted }}
+      {{ if eq .type $sec.type }}
+        {{ $secItems = $secItems | append . }}
+      {{ end }}
+    {{ end }}
+
+    {{ if $secItems }}
+      <section class="mb-20">
+
+        {{/* Section heading */}}
+        <div class="mb-5 flex items-center gap-3">
+          <span class="tl-pill-{{ $sec.sfx }} rounded-full px-3 py-1 text-lg font-semibold leading-tight">
+            {{ $sec.emoji }}
+          </span>
+          <div class="min-w-0 grow">
+            <h2 class="m-0 text-xl font-bold text-neutral-800 dark:text-neutral-100">
+              {{ if $isEN }}{{ $sec.labelEN }}{{ else }}{{ $sec.label }}{{ end }}
+            </h2>
+            <div class="tl-heading-{{ $sec.sfx }} mt-1 h-0.5 w-full border-0" style="height:2px; border-radius:1px;
+              {{ if eq $sec.sfx "education"    }}background:#e11d48;{{ end }}
+              {{ if eq $sec.sfx "professional" }}background:#16a34a;{{ end }}
+              {{ if eq $sec.sfx "extra"        }}background:#d97706;{{ end }}
+              {{ if eq $sec.sfx "organizing"   }}background:#7c3aed;{{ end }}
+              {{ if eq $sec.sfx "conference"   }}background:#0891b2;{{ end }}
+              {{ if eq $sec.sfx "volunteering" }}background:#ea580c;{{ end }}
+              {{ if eq $sec.sfx "publication"  }}background:#4f46e5;{{ end }}
+              {{ if eq $sec.sfx "award"        }}background:#ca8a04;{{ end }}
+            "></div>
+          </div>
+        </div>
+
+        {{/* Timeline for this section */}}
+        <div class="relative">
+
+          {{/* Vertical line — outside the sortable container */}}
+          <div
+            class="tl-line-{{ $sec.sfx }} absolute bottom-0 top-0 w-0.5"
+            style="left: 1.125rem;"
+            aria-hidden="true"
+          ></div>
+
+          {{/* Sortable items container */}}
+          <div class="tl-section-items flex flex-col gap-4 pb-1" id="tl-items-{{ $sec.sfx }}">
+
+            {{ range $secItems }}
+              {{ $hasDuration := or (eq $sec.type "education") (eq $sec.type "professional") (eq $sec.type "volunteering") }}
+
+              <div class="flex items-start gap-3">
+
+                {{/* Dot */}}
+                <div class="relative z-10 flex-none" style="width:2.25rem; padding-top:0.8rem;">
+                  <div
+                    class="tl-dot-{{ $sec.sfx }} mx-auto h-3.5 w-3.5 rounded-full ring-2 ring-neutral dark:ring-neutral-900"
+                    style="margin-left:0.3125rem;"
+                    aria-hidden="true"
+                  ></div>
+                </div>
+
+                {{/* Card */}}
+                <div class="tl-card tl-card-{{ $sec.sfx }} min-w-0 grow rounded-lg bg-neutral-50 px-4 py-3 shadow-sm dark:bg-neutral-800">
+
+                  {{/* Title row */}}
+                  <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-1">
+                    <div class="min-w-0">
+                      <p class="text-base font-semibold leading-snug text-neutral-900 dark:text-neutral">
+                        {{ if and $isEN .titleEN }}{{ .titleEN }}{{ else }}{{ .title }}{{ end }}
+                      </p>
+                      <p class="tl-meta-{{ $sec.sfx }} mt-0.5 text-xs font-medium">
+                        {{ .institution }}
+                        {{ with .location }}
+                          <span class="mx-1 opacity-40">·</span>{{ if $isEN }}{{ . | replaceRE `(?i)remoto` "Remote" }}{{ else }}{{ . }}{{ end }}
+                        {{ end }}
+                      </p>
+                      {{/* Tag badge */}}
+                      {{ with .tag }}
+                        {{ $tagLabel := . }}
+                        {{ if $isEN }}
+                          {{ if eq . "science"  }}{{ $tagLabel = "Science" }}{{ end }}
+                          {{ if eq . "tech"     }}{{ $tagLabel = "Tech" }}{{ end }}
+                          {{ if eq . "workshop" }}{{ $tagLabel = "Workshop" }}{{ end }}
+                          {{ if eq . "outreach" }}{{ $tagLabel = "Outreach" }}{{ end }}
+                        {{ else }}
+                          {{ if eq . "science"  }}{{ $tagLabel = "Ciencia" }}{{ end }}
+                          {{ if eq . "tech"     }}{{ $tagLabel = "Tech" }}{{ end }}
+                          {{ if eq . "workshop" }}{{ $tagLabel = "Taller" }}{{ end }}
+                          {{ if eq . "outreach" }}{{ $tagLabel = "Divulgación" }}{{ end }}
+                        {{ end }}
+                        <span class="tag-badge tag-{{ . }}">{{ $tagLabel }}</span>
+                      {{ end }}
+                    </div>
+
+                    {{/* Date badge */}}
+                    {{ if $hasDuration }}
+                      {{ $isProfessional := eq $sec.type "professional" }}
+                      {{ $isProfessional := eq $sec.type "professional" }}
+                      {{ $startStr := .startDate }}
+                      {{ if eq (len $startStr) 4 }}{{ $startStr = printf "%s-01-01" $startStr }}{{ end }}
+                      {{ if eq (len $startStr) 7 }}{{ $startStr = printf "%s-01" $startStr }}{{ end }}
+                      {{ $start := time $startStr }}
+                      {{ $end := now }}
+                      {{ if ne .endDate "present" }}
+                        {{ $endStr := .endDate }}
+                        {{ if eq (len $endStr) 4 }}{{ $endStr = printf "%s-12-31" $endStr }}{{ end }}
+                        {{ if eq (len $endStr) 7 }}{{ $endStr = printf "%s-01" $endStr }}{{ end }}
+                        {{ $end = time $endStr }}
+                      {{ end }}
+                      {{ $totalMonths := add (add (mul (sub $end.Year $start.Year) 12) (sub (int $end.Month) (int $start.Month))) 1 }}
+                      {{ $years := div $totalMonths 12 }}
+                      {{ $months := mod $totalMonths 12 }}
+                      <div class="flex flex-col items-end gap-0.5 flex-none">
+                        <span class="tl-badge-{{ $sec.sfx }} rounded-full px-2.5 py-0.5 text-xs font-semibold">
+                          {{ dateFormat "Jan 2006" $start }} – {{ if eq .endDate "present" -}}
+                            {{ if $isEN }}Present{{ else }}Presente{{ end }}
+                          {{- else }}{{ dateFormat "Jan 2006" $end }}{{ end }}
+                        </span>
+                        {{ if $isProfessional }}
+                          <span class="text-xs text-neutral-400 dark:text-neutral-500">
+                            {{ if gt $years 0 }}{{ $years }}{{ if $isEN }} yr{{ else }} a{{ end }}{{ if gt $months 0 }},{{ end }}{{ end }}{{ if gt $months 0 }} {{ $months }}{{ if $isEN }} mo{{ else }} m{{ end }}{{ end }}
+                          </span>
+                        {{ end }}
+                      </div>
+                    {{ else }}
+                      {{ $dateStr := .date }}
+                      {{ if eq (len $dateStr) 4 }}{{ $dateStr = printf "%s-01-01" $dateStr }}{{ end }}
+                      {{ if eq (len $dateStr) 7 }}{{ $dateStr = printf "%s-01" $dateStr }}{{ end }}
+                      <span class="tl-badge-{{ $sec.sfx }} flex-none rounded-full px-2.5 py-0.5 text-xs font-semibold">
+                        {{ dateFormat "Jan 2006" (time $dateStr) }}
+                      </span>
+                    {{ end }}
+                  </div>
+
+                  {{/* Description — use EN variant if available and site is in English */}}
+                  {{ $desc := .description }}
+                  {{ if and $isEN .descriptionEN }}{{ $desc = .descriptionEN }}{{ end }}
+                  {{ with $desc }}
+                    <p class="tl-desc mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+                      {{- . | replaceRE `\*\*([^*]+)\*\*` `<strong>$1</strong>` | safeHTML -}}
+                    </p>
+                  {{ end }}
+
+                  {{/* External link */}}
+                  {{ with .url }}
+                    <a
+                      href="{{ . | safeURL }}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="mt-1.5 inline-flex items-center gap-0.5 text-xs text-neutral-400 transition-colors hover:text-primary-600 dark:text-neutral-500 dark:hover:text-primary-400"
+                    >
+                      <span>&#8599;</span>
+                      <span>{{ if $isEN }}Visit site{{ else }}Ver sitio{{ end }}</span>
+                    </a>
+                  {{ end }}
+
+                </div>
+              </div>
+            {{ end }}{{/* end range $secItems */}}
+
+          </div>{{/* end tl-section-items */}}
+        </div>{{/* end relative */}}
+
+      </section>
+    {{ end }}{{/* end if $secItems */}}
+  {{ end }}{{/* end range $sections */}}
+
+  {{/* ── Sort toggle JavaScript ── */}}
+  <script>
+    (function () {
+      var descending = true;
+      var btn = document.getElementById('sort-toggle');
+      var labelDesc = btn.textContent.trim();
+      var labelAsc  = labelDesc
+        .replace('\u2193', '\u2191')
+        .replace('reciente', 'antiguo')
+        .replace('Newest', 'Oldest');
+
+      window.tlToggleSort = function () {
+        var containers = document.querySelectorAll('.tl-section-items');
+        containers.forEach(function (c) {
+          Array.from(c.children).reverse().forEach(function (el) { c.appendChild(el); });
+        });
+        descending = !descending;
+        btn.textContent = descending ? labelDesc : labelAsc;
+      };
+    })();
+  </script>
+
+{{ end }}
